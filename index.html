@@ -1,0 +1,98 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>致王萍</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* 亲爱的小仙女</span><br />
+				<span class="space"/><span class="comments">* 你知道我们认识了多久了吗？.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				i = <span class="keyword">new</span> 守护者(<span class="string">"李营飞"</span>);<br />
+				you = <span class="keyword">new</span> 小仙女(<span class="string">"王萍"</span>);<br />
+				<span class="comments">// Feb 11, 2016, 一见钟情. </span><br />
+				i.爱(you);<br />
+				<span class="comments">// 幸运的是我们在茫茫人海中相识，<br />从那时起你成为了我生命中不可割分的一部份.</span><br />
+				i.朋友();<br />
+				<span class="comments">// 从那以后，我就开始默默追求你.</span><br />
+				i.朝思暮想(you);<br />
+				<span class="comments">// 带你去吃好吃的成为了我的责任.</span><br />
+				i.马不停蹄追随(you);<br />
+				<span class="comments">// ，如今我们就要结婚了.</span><br />
+				<span class="comments">// 一辈子在一起</span><br />
+				
+				<span class="comments">// 我相信,我们会白头偕老.</span><br />
+				you. 嫁  (i);<br />
+				i. 李营飞  Feb 8, 2019 要娶(you) 王萍;<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						       -------------- 王萍, 我爱你！ -----------       
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						爱你的.<br/>
+						<div class="signature">- 李营飞</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2016, 2, 11);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+	<div id="void">
+	<audio src="5.mp3" autoplay="true"/>
+	</div>
+	
+</body>
+</html>
